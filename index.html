@@ -63,9 +63,12 @@
         <!-- we would greatly appreciate if you link cables somewhere on your site! and tell us your website! thanks <3 :) -->
     </footer>
 
-    <libs/>
-    <script type="text/javascript" src="js/patch.js" async></script>
-    <corelibs/>
+    
+    <script type="text/javascript" src="js/libs.core.min.js"></script>
+<script type="text/javascript" src="js/cables.min.js"></script>
+<script type="text/javascript" src="js/ops.js"></script>
+
+    
 
     <script>
 
@@ -83,7 +86,7 @@
 
         document.addEventListener('CABLES.jsLoaded', function (event) {
             CABLES.patch = new CABLES.Patch({
-                patch: CABLES.exportedPatch,
+                patchFile: 'js/audioanalyser_audioinputv3.json',
                 prefixAssetPath: '',
                 glCanvasId: 'glcanvas',
                 glCanvasResizeToWindow: true,
